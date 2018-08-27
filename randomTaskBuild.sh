@@ -1,14 +1,16 @@
 #!/bin/bash
 
-if [-d "build"] || [-d "b"];then
-  rm -rf build;
-  mkdir build;
-  cd build;
-  cmake .. ; 
-  make
+if [ -d "build" ] || [ -d 'b' ]; then
+	echo " Directory exists, deleting... "
+    rm -rf build;
+    mkdir build;
+    cd build;
+    cmake ..;
+    make
 else
-  mkdir build;
-  cd build;
-  cmake .. ; 
-  make
+	echo "Starting build... "
+    mkdir build;
+    cd build;
+    cmake ..;
+    make
 fi
