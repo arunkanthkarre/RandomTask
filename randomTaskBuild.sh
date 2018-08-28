@@ -7,10 +7,12 @@ if [ -d "build" ] || [ -d 'b' ]; then
     cd build;
     cmake ..;
     make
+    ./randomProject
 else
 	echo "Starting build... "
     mkdir build;
     cd build;
     cmake ..;
     make
+    ./randomProject
 fi
